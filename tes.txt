@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Input Data Santri ikhwan
+   ibadurrohman</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      color: #fff;
+      
+      background-color: #70ca55;
+      margin: 20px;
+    }
+    .input-form {
+      width: 400px;
+      margin: 0 auto;
+      background: rgb(8, 255, 49), 255, 255;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 50px rgba(250, 0, 0, 0.1);
+    }
+    .input-form h2 {
+      text-align: center;
+    }
+    .input-form input[type="text"]{
+      width: calc(94% - 20px);
+      padding: 10px;
+      margin: 10px;
+      margin-right: 10px;
+      border: 1px solid #000000;
+      border-radius: 3px;
+    }
+    .input-form select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      border: 1px solid #000000;
+      border-radius: 3px;
+    }
+    .input-form input[type="submit"] {
+      width: 70%;
+      padding: 10px;
+      margin-bottom: 10px;
+      margin-left: 60px;
+      border: none;
+      border-radius: 3px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    .input-form input[type="submit"]:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="input-form">
+    <h2>Data Santri ikhwan ibadurrohman</h2>
+    <form action="#" method="post" id="studentForm">
+      <input type="text" name="nama" placeholder="Nama Santri" required>
+      <select name="asrama" required>
+        <option value="" disabled selected>Pilih Asrama</option>
+        <option value="Asrama A">Asrama abu bakar 2</option>
+        <option value="Asrama B">Asrama abu bakar 3</option>
+        <option value="Asrama C">Asrama abu bakar 4</option>
+        <option value="Asrama A">Asrama umar 3</option>
+        <option value="Asrama B">Asrama umar 4</option>
+        <option value="Asrama C">Asrama ustman 1</option>
+        <option value="Asrama C">Asrama ustman 2</option>
+        <option value="Asrama C">Asrama ustman 3</option>
+        <option value="Asrama C">Asrama ustman 4</option>
+        <option value="Asrama C">Asrama ustman 5</option>
+  <div class="input-form">
+    <h2>Data Santri ikhwan ibadurrohman</h2>
+    <form action="#" method="post" id="studentForm">
+      <select>
+      <select name="asrama" required>
+        <option value="" disabled selected>Musyrif</option>
+        <option value="Asrama A">ustadz Bimo aryo</option>
+        <option value="Asrama B">ustadz Luthfi</option>
+        <option value="Asrama C">ustadz Alfan</option>
+        <option value="Asrama A">ustadz Fahd</option>
+        <option value="Asrama B">ustadz Nabhan</option>
+        <option value="Asrama C">ustadz Galang</option>
+        <option value="Asrama C">ustadz Sulaiman</option>
+      <input type="submit" value="Simpan">
+      <input type="submit" value="Cetak">
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('studentForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Lakukan sesuatu dengan data siswa yang dimasukkan, seperti menyimpan ke database atau menampilkan informasi.
+      const formData = new FormData(this);
+      // Contoh output data yang diambil dari form
+      const data = {
+        nama: formData.get('nama'),
+        asrama: formData.get('asrama'),
+        musyrif: formData.get('musyrif')
+      };
+      // Tampilkan informasi ke console
+      console.log('Data Siswa:', data);
+      // Anda bisa mengirim data ini ke server atau melakukan operasi lainnya di sini
+      // Misalnya, menggunakan fetch() untuk mengirim data ke backend
+      // fetch('url_server', {
+      //   method: 'POST',
+      //   body: JSON.stringify(data),
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   }
+      // })
+      // .then(response => response.json())
+      // .then(data => {
+      //   console.log('Response:', data);
+      // })
+      // .catch(error => {
+      //   console.error('Error:', error);
+      // });
+    });
+  </script>
+
+</body>
+</html>
